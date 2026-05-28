@@ -1,4 +1,4 @@
-# winger.ai 💘
+# winger.ai 
 
 ### Your AI Wingman for Modern Dating.
 
