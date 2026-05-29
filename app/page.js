@@ -336,14 +336,21 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-2 justify-end">
-            <a href="#pricing" className="hidden sm:inline-flex glass-pill px-4 py-2 text-sm text-white/70 hover:text-white transition-colors">
-              Sign in
-            </a>
-            <a href="#pricing" className="grad-btn rounded-2xl px-4 py-2.5 text-sm font-semibold">
-              Get Winger →
-            </a>
-          </div>
+          <div className="hidden md:flex items-center gap-2 justify-end">
+  <a
+    href="#pricing"
+    className="glass-pill px-4 py-2 text-sm text-white/70 hover:text-white transition-colors"
+  >
+    Sign in
+  </a>
+
+  <a
+    href="#pricing"
+    className="grad-btn rounded-2xl px-4 py-2.5 text-sm font-semibold"
+  >
+    Get Winger →
+  </a>
+</div>
         </div>
       </header>
 
