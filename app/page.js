@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
@@ -152,6 +152,7 @@ const overthinkerReasons = [
   "You ask 3 friends what to say.",
   "You still don't send it.",
 ];
+const overthinkerEmojis = ["😰", "🔄", "💭", "😶"];
 
 const heroAvatars = [
   "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face",
@@ -521,13 +522,21 @@ export default function Home() {
           </p>
 
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {overthinkerReasons.map((reason, i) => (
-              <div key={i} className="glass-card rounded-2xl p-5 text-left reveal spot">
-                <div className="text-2xl mb-3">{"😰🔄💭😶�[i]"[i]}{"😰🔄💭😶".charAt(i)}</div>
-                <p className="text-sm text-white/75 leading-relaxed">{reason}</p>
-              </div>
-            ))}
-          </div>
+  {overthinkerReasons.map((reason, i) => (
+    <div
+      key={i}
+      className="glass-card rounded-2xl p-5 text-left reveal spot"
+    >
+      <div className="text-2xl mb-3">
+        {overthinkerEmojis[i]}
+      </div>
+
+      <p className="text-sm text-white/75 leading-relaxed">
+        {reason}
+      </p>
+    </div>
+  ))}
+</div>
 
           <div className="mt-10 glass-card rounded-2xl p-6 max-w-lg mx-auto border border-rose-500/20">
             <p className="text-lg font-semibold text-white/90">Winger fixes the loop.</p>
